@@ -22,10 +22,13 @@ struct HomeView<Data: HomeViewModelProtocol & ObservableObject>: View {
                         }
                     }
                 }
+                .navigationBarTitle(String(localized: "Users", table: "Localizable"))
+                .navigationBarTitleDisplayMode(.inline)
             } else {
                 ProgressView()
             }
         }
+        
         .onAppear{
             source.loadData()
         }

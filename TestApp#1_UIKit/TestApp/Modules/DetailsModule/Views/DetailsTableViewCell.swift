@@ -34,6 +34,7 @@ class DetailsTableViewCell: BaseCell {
         
         if titleLabel == nil {
             titleLabel = UILabel()
+            titleLabel.textColor = .systemBlue
             titleLabel.numberOfLines = 0
             self.addSubview(titleLabel)
             titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -45,6 +46,7 @@ class DetailsTableViewCell: BaseCell {
         
         if bodyLabel == nil {
             bodyLabel = UILabel()
+            bodyLabel.textColor = .systemBlue
             bodyLabel.numberOfLines = 0
             self.addSubview(bodyLabel)
             bodyLabel.translatesAutoresizingMaskIntoConstraints = false

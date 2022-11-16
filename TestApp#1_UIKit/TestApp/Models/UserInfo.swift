@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserInfo: Codable {
+struct UserInfo: Codable, Hashable {
     let albumID, userID: Int
     let name: String
     let url, thumbnailURL: String
@@ -17,5 +17,9 @@ struct UserInfo: Codable {
         case userID = "userId"
         case name, url
         case thumbnailURL = "thumbnailUrl"
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(userID)
     }
 }

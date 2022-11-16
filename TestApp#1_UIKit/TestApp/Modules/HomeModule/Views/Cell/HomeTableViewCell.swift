@@ -40,7 +40,7 @@ class BaseCell: UITableViewCell {
             contentBGView?.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).isActive = true
             contentBGView?.layer.cornerRadius = 26
         }
-        contentBGView?.layer.borderColor = UIColor.lightGray.cgColor
+        contentBGView?.layer.borderColor = UIColor.systemBlue.cgColor
         contentBGView?.layer.borderWidth = 1
     }
 }
@@ -86,6 +86,7 @@ class HomeTableViewCell: BaseCell {
         
         if nameLabel == nil {
             nameLabel = UILabel()
+            nameLabel.textColor = .systemBlue
             contentBGView.addSubview(nameLabel)
             nameLabel?.translatesAutoresizingMaskIntoConstraints = false
             
@@ -97,6 +98,7 @@ class HomeTableViewCell: BaseCell {
         
         if photoCountLabel == nil {
             photoCountLabel = UILabel()
+            photoCountLabel.textColor = .systemBlue
    
             contentBGView.addSubview(photoCountLabel)
             photoCountLabel?.translatesAutoresizingMaskIntoConstraints = false

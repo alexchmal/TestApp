@@ -74,8 +74,8 @@ class HomeModuleInteractor: HomeModuleInteractorProtocol {
        
         groupe.notify(queue: .main) {
             var users: [User] = []
-            for info in userInfoList {
-                users.append(User(shortInfo: info, posts: postList.filter({ $0.userID == info.userID})))
+            for info in Array(Set(userInfoList)).sorted(by: { $0.userID < $1.userID }) {
+                users.append(User(shortInfo: info, posts: Array(Set(postList.filter({ $0.userID == info.userID })))))
             }
             completion(.success(users))
         }

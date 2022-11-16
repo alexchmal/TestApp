@@ -14,6 +14,8 @@ struct TestAppApp: App {
         WindowGroup {
             HomeView<HomeViewModel>()
                 .environmentObject(state)
+                .environment(\.locale, Locale(identifier: "ar"))
+                .environment(\.layoutDirection, .rightToLeft)
         }
     }
 }
