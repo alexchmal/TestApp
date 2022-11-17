@@ -33,7 +33,7 @@ struct UserView: View {
                     Spacer()
                 }
                 HStack {
-                    Text("Post coount: \(user.posts.count)")
+                    Text("Post count: \(user.posts.count)")
                         .foregroundColor(.blue)
                     Spacer()
                 }
